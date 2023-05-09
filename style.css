@@ -44,7 +44,7 @@
 
 .formulario {
     background-color: var(--gris);
-    width: min(60rem,100%); /** utilizar el valor mas pequeño**/
+    width: min(40rem,100%); /** utilizar el valor mas pequeño**/
     margin: 0 auto;
     padding: 2rem;
     border-radius: 1rem;
@@ -56,7 +56,7 @@
 }
 .formulario legend{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
