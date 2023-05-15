@@ -13,9 +13,9 @@
     color: #fff;
 }
 
-.contenedor2 {
-    
-}
+.carousel-image {
+    height: 800px; /* Ajusta la altura según tus necesidades */
+  }
 
 .seccion1 {
     max-width: 100%;
@@ -33,6 +33,7 @@
 .nosotros {
     display: flex;
     justify-content: center;
+    
 } 
 
 /** Contacto **/

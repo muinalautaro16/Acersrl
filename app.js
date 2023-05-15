@@ -14,12 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputMensaje = document.querySelector('#mensaje');
     const formulario = document.querySelector('#formulario');
     const btnSubmit = document.querySelector('#formulario button[type="submit"]');
+    const spinner = document.querySelector('#spinner');
 
     // Asignar eventos
     inputNombre.addEventListener('input', validar);
     inputTelefono.addEventListener('input', validar);
     inputCorreo.addEventListener('input', validar);
     inputMensaje.addEventListener('input', validar);
+
+    formulario.addEventListener('submit', enviarEmail);
 
     function validar(e) {
         if(e.target.value.trim() === '') {
@@ -47,6 +50,36 @@ document.addEventListener('DOMContentLoaded', function() {
         // Comprobar el objeto mail
         comprobarEmail();
 
+    }
+
+    function enviarEmail(e) {
+        e.preventDefault();
+     
+        spinner.classList.remove('visually-hidden');
+
+        setTimeout(() => {
+            spinner.classList.add('visually-hidden');
+
+            //Reiniciar el objeto
+            nombre.nombre = '';
+            telefono.telefono = '';
+            email.email = '';
+            mensaje.mensaje = '';
+
+            formulario.reset();
+            comprobarEmail();
+
+            // Crear una alerta
+            const alertaExito = document.createElement('P');
+            alertaExito.classList.add('bg-success','p-3', 'mb-2', 'text-white', 'text-center');
+            alertaExito.textContent = 'Mensaje enviado correctamente';
+
+            formulario.appendChild(alertaExito);
+
+            setTimeout(() => {
+                alertaExito.remove();
+            }, 3000);
+        }, 3000);
     }
 
     function mostrarAlerta(mensaje, referencia) {
