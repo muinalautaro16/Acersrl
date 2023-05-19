@@ -22,6 +22,8 @@
     display: grid;
     justify-content: center; 
     background-color: var(--primario);
+    padding-top: 25px;
+    margin-bottom: 50px;
 }
 
 .card {
@@ -30,9 +32,15 @@
     
 }
 /** Nosotros **/
-.nosotros {
+.nosotros  {
     display: flex;
     justify-content: center;
+    background-color: #fff;
+    border: #00304E double;
+    margin: 20px 100px;
+    max-width: 80%;
+    font-size: 22px;
+    
     
 } 
 
